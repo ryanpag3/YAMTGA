@@ -1,0 +1,3 @@
+# Magic: The Gathering
+
+"Magic: The Gathering® is a registered trademark of Wizards of the Coast LLC. This [document/material/work] is not affiliated with, endorsed, sponsored, or specifically approved by Wizards of the Coast LLC. This [document/material/work] may use the trademarks and other intellectual property of Magic: The Gathering®, which is permitted under Wizards' Fan Site Policy available at https://company.wizards.com/fancontentpolicy. Magic: The Gathering® images, logos, and text are used here solely for identification purposes. Wizards of the Coast LLC owns the copyright and trademark rights to Magic: The Gathering®. All rights reserved to Wizards of the Coast LLC."
