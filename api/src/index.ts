@@ -2,8 +2,8 @@ import closeWithGrace from 'close-with-grace';
 import dotenv from 'dotenv';
 import Fastify from 'fastify';
 import app from './app';
-import isProd from './util/is-prod';
-import logger from './util/logger';
+import isProd from './utils/is-prod';
+import logger from './utils/logger';
 
 // Load environment variables from .env file.
 dotenv.config();
@@ -41,7 +41,6 @@ void server.ready((err) => {
 
     logger.info('YAMTGA API server is ready!');
     logger.debug(server.printRoutes());
-    logger.info(`Server is listening on port ${Number(process.env.PORT ?? 3000)}`);
 });
 
 export { server as app };
