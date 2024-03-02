@@ -4,6 +4,6 @@ import fp from 'fastify-plugin';
 
 export default fp<FastifyCookieOptions>(async (fastify) => {
     void fastify.register(Cookie, {
-        secret: 'replaceme'
+        secret: fastify.config.COOKIE_SECRET
     })
 });

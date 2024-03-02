@@ -29,7 +29,7 @@ server.addHook('onClose', (_instance, done) => {
 
 void server.listen({
     port: Number(process.env.PORT ?? 3000),
-    host: process.env.SERVER_HOSTNAME ?? '127.0.0.1'
+    host: process.env.HOSTNAME ?? '127.0.0.1'
 });
 
 void server.ready((err) => {
