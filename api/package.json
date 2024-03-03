@@ -6,6 +6,7 @@
   "license": "UNLICENSED",
   "scripts": {
     "watch": "nodemon src/index.ts | pino-pretty",
+    "start": "node dist/src/index.js",
     "prisma:migrate": "yarn migrate dev"
   },
   "dependencies": {
