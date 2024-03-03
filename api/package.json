@@ -5,7 +5,8 @@
   "author": "Ryan Page",
   "license": "UNLICENSED",
   "scripts": {
-    "watch": "nodemon src/index.ts | pino-pretty"
+    "watch": "nodemon src/index.ts | pino-pretty",
+    "prisma:migrate": "yarn migrate dev"
   },
   "dependencies": {
     "@fastify/autoload": "^5.8.0",
@@ -23,6 +24,7 @@
     "nodemon": "^3.1.0",
     "pino": "^8.19.0",
     "pino-pretty": "^10.3.1",
+    "prisma": "^5.10.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
   },
