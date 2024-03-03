@@ -1,3 +1,10 @@
+/**
+ * Do *not* move this file to ./plugins
+ * 
+ * @fastify/env autoload ignorepattern did not compile nicely. 
+ * The only way I could found to reliably not produce a runtime
+ * error was to not include it. YMMV, I hope...
+ */
 import type { FastifyEnvOptions } from '@fastify/env';
 import env from '@fastify/env';
 import fp from 'fastify-plugin';

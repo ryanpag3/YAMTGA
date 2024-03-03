@@ -2,7 +2,7 @@ import type { AutoloadPluginOptions } from '@fastify/autoload';
 import AutoLoad from '@fastify/autoload';
 import type { FastifyPluginAsync } from 'fastify';
 import { join } from 'path';
-import EnvPlugin from './plugins/env';
+import EnvPlugin from './config/env';
 
 export type AppOptions = {
     // Any custom options go here.
@@ -19,8 +19,7 @@ const app: FastifyPluginAsync<AppOptions> = async (
     // Load all the other plugins.
     void fastify.register(AutoLoad, {
         dir: join(__dirname, 'plugins'),
-        options: opts,
-        ignoreFilter: (path) => path.endsWith('env.ts')
+        options: opts
     });
 
     // Load all routes.
