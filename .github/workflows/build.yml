@@ -25,9 +25,13 @@ jobs:
       - name: Setup node
         uses: actions/setup-node@v4
       - name: Install dependencies
-        run: yarn install
-      - name: Run tests
+        run: |
+          yarn global add dotenv
+          yarn install
+      - name: Run unit tests
         run: yarn test:unit
+      - name: Run integration tests
+        run: yarn test:integration
   docker:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
