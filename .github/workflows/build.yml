@@ -28,8 +28,10 @@ jobs:
         run: |
           yarn global add dotenv
           yarn install
-      - name: Run tests
+      - name: Run unit tests
         run: yarn test:unit
+      - name: Run integration tests
+        run: yarn test:integration
   docker:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'

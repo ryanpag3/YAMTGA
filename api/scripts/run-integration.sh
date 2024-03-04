@@ -3,8 +3,6 @@
 DIR="$(cd "$(dirname "$0")" && pwd)"
 source $DIR/setenv.sh
 
-cd ..
-
 docker-compose up -d
 echo '🟡 - Waiting for database to be ready...'
 $DIR/wait-for-it.sh "${DATABASE_WAIT_FOR_IT_URL}" -- echo '🟢 - Database is ready!'

@@ -10,7 +10,9 @@
     "prisma:migrate": "npx prisma migrate dev",
     "prisma:migrate:integration-test": "dotenv -e .integration-test.env -- npx prisma migrate deploy",
     "test:unit": "vitest -c vitest.config.unit.ts",
-    "test:unit:ui": "yarn test:unit --ui"
+    "test:unit:ui": "yarn test:unit --ui",
+    "test:integration": "bash scripts/run-integration.sh",
+    "test:integration:ui": "yarn test:integration --ui"
   },
   "dependencies": {
     "@fastify/autoload": "^5.8.0",
