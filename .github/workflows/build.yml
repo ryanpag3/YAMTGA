@@ -8,16 +8,17 @@ jobs:
     defaults:
       run:
         working-directory: ./api
-    services:
-      postgres:
-        image: postgres:latest
-        env:
-          POSTGRES_USER: username
-          POSTGRES_PASSWORD: password
-          POSTGRES_DB: test_yamtga-db
-        ports:
-          - 5432:5432
-        options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 3
+    # Not needed until integration tests?
+    # services:
+    #   postgres:
+    #     image: postgres:latest
+    #     env:
+    #       POSTGRES_USER: username
+    #       POSTGRES_PASSWORD: password
+    #       POSTGRES_DB: test_yamtga-db
+    #     ports:
+    #       - 5432:5432
+    #     options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 3
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -26,7 +27,7 @@ jobs:
       - name: Install dependencies
         run: yarn install
       - name: Run tests
-        run: yarn test
+        run: yarn test:unit
   docker:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
