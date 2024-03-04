@@ -26,6 +26,7 @@ jobs:
         uses: actions/setup-node@v4
       - name: Install dependencies
         run: |
+          // required for integration tests
           yarn global add dotenv
           yarn install
       - name: Run unit tests
