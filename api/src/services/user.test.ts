@@ -8,6 +8,8 @@ test('createUser should return the generated user', async () => {
     const newUser = { name: 'ryan' };
     const uuid = 'b3a034d7-afe8-46e9-9087-cd5548357e42';
     prisma.user.create.mockResolvedValue({ ...newUser, id: uuid });
-    const user = await createUser(newUser);
+    const user = await createUser({
+        data: newUser
+    });
     expect(user).toEqual({ ...newUser, id: uuid });
 });
